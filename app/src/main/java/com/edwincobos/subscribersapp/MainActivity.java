@@ -1,4 +1,4 @@
-package com.example.edwincobos.subscribersapp;
+package com.edwincobos.subscribersapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

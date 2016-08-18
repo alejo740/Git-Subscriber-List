@@ -1,4 +1,4 @@
-package com.example.edwincobos.subscribersapp;
+package com.edwincobos.subscribersapp;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

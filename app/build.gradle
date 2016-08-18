@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.1"
 
     defaultConfig {
-        applicationId "com.example.edwincobos.subscribersapp"
+        applicationId "com.edwincobos.subscribersapp"
         minSdkVersion 14
         targetSdkVersion 24
         versionCode 1

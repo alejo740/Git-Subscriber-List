@@ -1,4 +1,4 @@
-package com.example.edwincobos.subscribersapp;
+package com.edwincobos.subscribersapp;
 
 import org.junit.Test;
 
