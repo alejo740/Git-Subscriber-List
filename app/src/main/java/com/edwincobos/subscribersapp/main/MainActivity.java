@@ -1,18 +1,17 @@
 package com.edwincobos.subscribersapp.main;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.widget.ImageView;
 
 import com.edwincobos.subscribersapp.R;
 import com.edwincobos.subscribersapp.subscriberslist.SubscribersListActivity;
 
-import pl.droidsonroids.gif.GifImageView;
-
 public class MainActivity extends AppCompatActivity {
 
-    private GifImageView gifImageView;
+    private ImageView logoImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startAnimation() {
-        gifImageView = (GifImageView) findViewById(R.id.splashLogo);
+        logoImage = (ImageView) findViewById(R.id.splashLogo);
 
-        gifImageView.setScaleX(0.0f);
-        gifImageView.setScaleY(0.0f);
-        gifImageView.animate().setStartDelay(200).setDuration(1300).scaleX(1.0f).scaleY(1.0f);
+        logoImage.setScaleX(0.0f);
+        logoImage.setScaleY(0.0f);
+        logoImage.animate().setStartDelay(200).setDuration(1300).scaleX(1.0f).scaleY(1.0f);
     }
 
     private void startTimer(){
