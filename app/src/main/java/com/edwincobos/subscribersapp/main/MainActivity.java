@@ -10,6 +10,10 @@ import com.edwincobos.subscribersapp.R;
 import com.edwincobos.subscribersapp.commons.utils.Constants;
 import com.edwincobos.subscribersapp.subscriberslist.SubscribersListActivity;
 
+/**
+ * This is the main activity where the App starts with splash screen
+ * @author edwin.cobos
+ */
 public class MainActivity extends AppCompatActivity {
 
     private ImageView logoImage;
@@ -23,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         startTimer();
     }
 
+    /**
+     * Function to set up and play the image's animation
+     */
     private void startAnimation() {
         logoImage = (ImageView) findViewById(R.id.splashLogo);
 
@@ -35,7 +42,10 @@ public class MainActivity extends AppCompatActivity {
                 scaleY(Constants.SPLASH_LOGO_ANIMATION.FINAL_SCALE);
     }
 
-    private void startTimer(){
+    /**
+     * Function to start the timer delay before changing activity
+     */
+    private void startTimer() {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -45,6 +55,5 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         }, Constants.SPLASH_DELAY);
-
     }
 }
