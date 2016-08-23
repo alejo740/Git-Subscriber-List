@@ -5,6 +5,10 @@ import android.os.Bundle;
 import com.edwincobos.subscribersapp.R;
 import com.edwincobos.subscribersapp.commons.abstracts.AbstractActivity;
 
+/**
+ * This Activity shows the subscribers list of Github
+ * @author edwin.cobos
+ */
 public class SubscribersListActivity extends AbstractActivity implements SubscribersListView {
 
     private SubscribersListPresenter presenter;

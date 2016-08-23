@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".main.MainActivity"
-    android:background="#ffffff">
+    android:background="@color/white">
 
     <TextView
         android:gravity="center_horizontal"
-        android:padding="16dp"
-        android:textSize="25sp"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:textSize="@dimen/splash_title_size"
         android:text="@string/splash_title"
         android:textColor="@color/colorTitle"
         android:layout_width="match_parent"

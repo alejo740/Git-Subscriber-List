@@ -7,8 +7,13 @@ import android.widget.ImageView;
 
 import com.edwincobos.subscribersapp.R;
 import com.edwincobos.subscribersapp.commons.abstracts.AbstractActivity;
+import com.edwincobos.subscribersapp.commons.utils.Constants;
 import com.edwincobos.subscribersapp.subscriberslist.SubscribersListActivity;
 
+/**
+ * This is the main activity where the App starts with splash screen
+ * @author edwin.cobos
+ */
 public class MainActivity extends AbstractActivity {
 
     private ImageView logoImage;
@@ -22,25 +27,33 @@ public class MainActivity extends AbstractActivity {
         startTimer();
     }
 
+    /**
+     * Function to set up and play the image's animation
+     */
     private void startAnimation() {
         logoImage = (ImageView) findViewById(R.id.splashLogo);
 
-        logoImage.setScaleX(0.0f);
-        logoImage.setScaleY(0.0f);
-        logoImage.animate().setStartDelay(200).setDuration(1300).scaleX(1.0f).scaleY(1.0f);
+        logoImage.setScaleX(Constants.SPLASH_LOGO_ANIMATION.INIT_SCALE);
+        logoImage.setScaleY(Constants.SPLASH_LOGO_ANIMATION.INIT_SCALE);
+        logoImage.animate().
+                setStartDelay(Constants.SPLASH_LOGO_ANIMATION.START_DELAY).
+                setDuration(Constants.SPLASH_LOGO_ANIMATION.DURATION).
+                scaleX(Constants.SPLASH_LOGO_ANIMATION.FINAL_SCALE).
+                scaleY(Constants.SPLASH_LOGO_ANIMATION.FINAL_SCALE);
     }
 
-    private void startTimer(){
+    /**
+     * Function to start the timer delay before changing activity
+     */
+    private void startTimer() {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent intent = new Intent();
                 intent.setClass(getApplicationContext(), SubscribersListActivity.class);
                 startActivity(intent);
-                //overridePendingTransition(R.anim.effect_fade_in, R.anim.effect_fade_out);
                 finish();
             }
-        }, 3000);
-
+        }, Constants.SPLASH_DELAY);
     }
 }
