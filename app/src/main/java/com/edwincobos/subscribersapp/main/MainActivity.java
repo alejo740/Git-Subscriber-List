@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.edwincobos.subscribersapp.R;
+import com.edwincobos.subscribersapp.commons.utils.Constants;
 import com.edwincobos.subscribersapp.subscriberslist.SubscribersListActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,9 +26,13 @@ public class MainActivity extends AppCompatActivity {
     private void startAnimation() {
         logoImage = (ImageView) findViewById(R.id.splashLogo);
 
-        logoImage.setScaleX(0.0f);
-        logoImage.setScaleY(0.0f);
-        logoImage.animate().setStartDelay(200).setDuration(1300).scaleX(1.0f).scaleY(1.0f);
+        logoImage.setScaleX(Constants.SPLASH_LOGO_ANIMATION.INIT_SCALE);
+        logoImage.setScaleY(Constants.SPLASH_LOGO_ANIMATION.INIT_SCALE);
+        logoImage.animate().
+                setStartDelay(Constants.SPLASH_LOGO_ANIMATION.START_DELAY).
+                setDuration(Constants.SPLASH_LOGO_ANIMATION.DURATION).
+                scaleX(Constants.SPLASH_LOGO_ANIMATION.FINAL_SCALE).
+                scaleY(Constants.SPLASH_LOGO_ANIMATION.FINAL_SCALE);
     }
 
     private void startTimer(){
@@ -37,10 +42,9 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setClass(getApplicationContext(), SubscribersListActivity.class);
                 startActivity(intent);
-                //overridePendingTransition(R.anim.effect_fade_in, R.anim.effect_fade_out);
                 finish();
             }
-        }, 3000);
+        }, Constants.SPLASH_DELAY);
 
     }
 }
