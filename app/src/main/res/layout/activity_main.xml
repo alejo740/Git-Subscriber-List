@@ -9,7 +9,7 @@
     <TextView
         android:gravity="center_horizontal"
         android:padding="@dimen/activity_horizontal_margin"
-        android:textSize="@dimen/splash.title.size"
+        android:textSize="@dimen/splash_title_size"
         android:text="@string/splash_title"
         android:textColor="@color/colorTitle"
         android:layout_width="match_parent"
