@@ -1,81 +1,67 @@
 package com.edwincobos.subscribersapp.commons.models;
 
-import java.util.ArrayList;
+import com.google.gson.annotations.SerializedName;
+
+import java.lang.reflect.Field;
+
 
 /**
- * ItemUserList class that represents each Github subscriber
+ * Subscriber class that represents each Github subscriber
  * @author edwin.cobos
  * @since 19/08/2016
  */
-public class ItemUserList {
+public class Subscriber {
 
-    private ArrayList<String> repoNames;
+    @SerializedName("login")
     private String login;
-    private int id;
+
+    @SerializedName("id")
+    private Integer id;
+    
+    @SerializedName("avatar_url")
     private String avatarUrl;
+
+    @SerializedName("gravatar_id")
     private String gravatarId;
+
+    @SerializedName("url")
     private String url;
+
+    @SerializedName("html_url")
     private String htmlUrl;
+
+    @SerializedName("followers_url")
     private String followersUrl;
+
+    @SerializedName("following_url")
     private String followingUrl;
+
+    @SerializedName("gists_url")
     private String gistsUrl;
+
+    @SerializedName("starred_url")
     private String starredUrl;
+
+    @SerializedName("subscriptions_url")
     private String subscriptionsUrl;
+
+    @SerializedName("organizations_url")
     private String organizationsUrl;
+
+    @SerializedName("repos_url")
     private String reposUrl;
+
+    @SerializedName("events_url")
     private String eventsUrl;
+
+    @SerializedName("received_events_url")
     private String receivedEventsUrl;
+
+    @SerializedName("type")
     private String type;
-    private boolean siteAdmin;
 
-    /**
-     * No args constructor for use in serialization
-     *
-     */
-    public ItemUserList() {
-    }
-
-    /**
-     *
-     * @param repoNames
-     * @param login
-     * @param id
-     * @param avatarUrl
-     * @param gravatarId
-     * @param url
-     * @param htmlUrl
-     * @param followersUrl
-     * @param followingUrl
-     * @param gistsUrl
-     * @param starredUrl
-     * @param subscriptionsUrl
-     * @param organizationsUrl
-     * @param reposUrl
-     * @param eventsUrl
-     * @param receivedEventsUrl
-     * @param type
-     * @param siteAdmin
-     */
-    public ItemUserList(ArrayList<String> repoNames, String login, int id, String avatarUrl, String gravatarId, String url, String htmlUrl, String followersUrl, String followingUrl, String gistsUrl, String starredUrl, String subscriptionsUrl, String organizationsUrl, String reposUrl, String eventsUrl, String receivedEventsUrl, String type, boolean siteAdmin) {
-        this.repoNames = repoNames;
-        this.login = login;
-        this.id = id;
-        this.avatarUrl = avatarUrl;
-        this.gravatarId = gravatarId;
-        this.url = url;
-        this.htmlUrl = htmlUrl;
-        this.followersUrl = followersUrl;
-        this.followingUrl = followingUrl;
-        this.gistsUrl = gistsUrl;
-        this.starredUrl = starredUrl;
-        this.subscriptionsUrl = subscriptionsUrl;
-        this.organizationsUrl = organizationsUrl;
-        this.reposUrl = reposUrl;
-        this.eventsUrl = eventsUrl;
-        this.receivedEventsUrl = receivedEventsUrl;
-        this.type = type;
-        this.siteAdmin = siteAdmin;
-    }
+    @SerializedName("site_admin")
+    private Boolean siteAdmin;
 
     /**
      *
@@ -100,7 +86,7 @@ public class ItemUserList {
      * @return
      * The id
      */
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -109,7 +95,7 @@ public class ItemUserList {
      * @param id
      * The id
      */
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -370,7 +356,7 @@ public class ItemUserList {
      * @return
      * The siteAdmin
      */
-    public boolean isSiteAdmin() {
+    public Boolean getSiteAdmin() {
         return siteAdmin;
     }
 
@@ -379,25 +365,38 @@ public class ItemUserList {
      * @param siteAdmin
      * The site_admin
      */
-    public void setSiteAdmin(boolean siteAdmin) {
+    public void setSiteAdmin(Boolean siteAdmin) {
         this.siteAdmin = siteAdmin;
     }
 
-    /**
-     *
-     * @return
-     * The repoNames
-     */
-    public ArrayList<String> getRepoNames() {
-        return repoNames;
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        String newLine = System.getProperty("line.separator");
+
+        result.append( this.getClass().getName() );
+        result.append( " Object {" );
+        result.append(newLine);
+
+        //determine fields declared in this class only (no fields of superclass)
+        Field[] fields = this.getClass().getDeclaredFields();
+
+        //print field names paired with their values
+        for ( Field field : fields  ) {
+            result.append("  ");
+            try {
+                result.append( field.getName() );
+                result.append(": ");
+                //requires access to private field:
+                result.append( field.get(this) );
+            } catch ( IllegalAccessException ex ) {
+                System.out.println(ex);
+            }
+            result.append(newLine);
+        }
+        result.append("}");
+
+        return result.toString();
     }
 
-    /**
-     *
-     * @param repoNames
-     * The repo_names
-     */
-    public void setRepoNames(ArrayList<String> repoNames) {
-        this.repoNames = repoNames;
-    }
 }

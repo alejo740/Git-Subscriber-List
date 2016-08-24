@@ -9,7 +9,9 @@ import android.util.Log;
 public class Utils {
 
     public static void debugLog(String msg){
-        Log.i(Constants.DEBUG_PREFIX, msg);
+        if(Constants.DEBUG_LOGS) {
+            Log.i(Constants.DEBUG_PREFIX, msg);
+        }
     }
 
 }

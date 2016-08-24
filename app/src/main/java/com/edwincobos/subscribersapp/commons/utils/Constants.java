@@ -8,7 +8,8 @@ public class Constants {
 
     public static final String GITHUB_BASE_URL = "https://api.github.com/";
 
-    public static final String DEBUG_PREFIX = "GTTHUBAPI";
+    public static final String DEBUG_PREFIX = "GITHUBAPI";
+    public static final boolean DEBUG_LOGS = true;
 
     public static final long SPLASH_DELAY = 3000;
     public final static class SPLASH_LOGO_ANIMATION {

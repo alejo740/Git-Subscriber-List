@@ -11,4 +11,5 @@ public interface SubscribersListPresenter {
 
     void onDestroy();
 
+    void getSubscribersList();
 }

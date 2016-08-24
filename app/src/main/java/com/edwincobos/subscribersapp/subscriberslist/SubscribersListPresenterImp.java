@@ -1,6 +1,6 @@
 package com.edwincobos.subscribersapp.subscriberslist;
 
-import com.edwincobos.subscribersapp.commons.models.ItemUserList;
+import com.edwincobos.subscribersapp.commons.models.Subscriber;
 import com.edwincobos.subscribersapp.commons.utils.Utils;
 
 import java.util.Arrays;
@@ -33,7 +33,12 @@ public class SubscribersListPresenterImp implements SubscribersListPresenter, Su
     }
 
     @Override
-    public void onFinished(List<ItemUserList> listItems) {
+    public void getSubscribersList() {
+        interactor.getSubscribersDataList(this);
+    }
+
+    @Override
+    public void onFinished(List<Subscriber> listItems) {
         Utils.debugLog(Arrays.deepToString(listItems.toArray()));
     }
 }

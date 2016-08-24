@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
  */
 public abstract class AbstractActivity extends AppCompatActivity {
 
-    protected void hideBar(){
+    protected void hideBar() {
         if(getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }

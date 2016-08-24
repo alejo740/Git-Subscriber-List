@@ -1,6 +1,6 @@
 package com.edwincobos.subscribersapp.subscriberslist;
 
-import com.edwincobos.subscribersapp.commons.models.ItemUserList;
+import com.edwincobos.subscribersapp.commons.models.Subscriber;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import java.util.List;
  */
 public interface SubscribersListInteractor {
     interface OnFinishedListener {
-        void onFinished(List<ItemUserList> listItems);
+        void onFinished(List<Subscriber> listItems);
     }
 
     void getSubscribersDataList(OnFinishedListener listener);

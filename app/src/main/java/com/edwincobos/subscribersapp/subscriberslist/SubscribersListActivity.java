@@ -19,6 +19,7 @@ public class SubscribersListActivity extends AbstractActivity implements Subscri
         setContentView(R.layout.activity_subscribers_list);
 
         presenter = new SubscribersListPresenterImp(this);
+        presenter.getSubscribersList();
     }
 
     @Override
