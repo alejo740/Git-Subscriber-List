@@ -11,7 +11,10 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
- * Created by edwin.cobos on 19/08/2016.
+ * Interactor class that manage the connection with external sources to get Data.
+ * This class implements SubscribersListInteractor interface.
+ * @author edwin.cobos
+ * @since 19/08/2016
  */
 public class SubscribersListInteractorImp implements SubscribersListInteractor {
     @Override

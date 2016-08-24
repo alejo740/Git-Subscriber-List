@@ -5,7 +5,9 @@ import com.edwincobos.subscribersapp.commons.models.ItemUserList;
 import java.util.List;
 
 /**
- * Created by edwin.cobos on 19/08/2016.
+ * Interface SubscribersListInteractor that represents interactor class(Model) to deliver the data to presenter.
+ * @author edwin.cobos
+ * @since 19/08/2016
  */
 public interface SubscribersListInteractor {
     interface OnFinishedListener {

@@ -7,7 +7,10 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by edwin.cobos on 18/08/2016.
+ * Presenter class that connect the Activity class(view) and Interactor class(Model).
+ * This class implements SubscribersListPresenter interface.
+ * @author edwin.cobos
+ * @since 18/08/2016
  */
 public class SubscribersListPresenterImp implements SubscribersListPresenter, SubscribersListInteractor.OnFinishedListener {
 
@@ -17,8 +20,6 @@ public class SubscribersListPresenterImp implements SubscribersListPresenter, Su
     public SubscribersListPresenterImp(SubscribersListView view){
         this.view = view;
         this.interactor = new SubscribersListInteractorImp();
-
-        //interactor.getSubscribersDataList(this);
     }
 
     @Override

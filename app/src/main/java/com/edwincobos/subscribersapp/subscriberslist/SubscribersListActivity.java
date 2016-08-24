@@ -6,7 +6,8 @@ import com.edwincobos.subscribersapp.R;
 import com.edwincobos.subscribersapp.commons.abstracts.AbstractActivity;
 
 /**
- * This Activity shows the subscribers list of Github
+ * This Activity shows the subscribers list of Github.
+ * This class implements the SubscribersListView interface
  * @author edwin.cobos
  */
 public class SubscribersListActivity extends AbstractActivity implements SubscribersListView {

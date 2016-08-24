@@ -1,7 +1,9 @@
 package com.edwincobos.subscribersapp.subscriberslist;
 
 /**
- * Created by edwin.cobos on 18/08/2016.
+ * Interface SubscribersListPresenter that represents the presenter class to communicate the Activity class(view) and Interactor class(Model).
+ * @author edwin.cobos
+ * @since 18/08/2016
  */
 public interface SubscribersListPresenter {
 

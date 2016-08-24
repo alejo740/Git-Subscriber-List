@@ -3,7 +3,9 @@ package com.edwincobos.subscribersapp.commons.models;
 import java.util.ArrayList;
 
 /**
- * Created by edwin.cobos on 19/08/2016.
+ * ItemUserList class that represents each Github subscriber
+ * @author edwin.cobos
+ * @since 19/08/2016
  */
 public class ItemUserList {
 

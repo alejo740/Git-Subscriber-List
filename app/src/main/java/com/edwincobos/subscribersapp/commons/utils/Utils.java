@@ -3,7 +3,8 @@ package com.edwincobos.subscribersapp.commons.utils;
 import android.util.Log;
 
 /**
- * Created by edwin.cobos on 19/08/2016.
+ * @author edwin.cobos
+ * @since 19/08/2016
  */
 public class Utils {
 

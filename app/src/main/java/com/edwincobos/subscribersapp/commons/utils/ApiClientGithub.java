@@ -9,7 +9,8 @@ import retrofit2.Retrofit;
 import retrofit2.http.GET;
 
 /**
- * Created by edwin.cobos on 19/08/2016.
+ * @author edwin.cobos
+ * @since 19/08/2016
  */
 public class ApiClientGithub {
     private static GithubApiInterface apiService;

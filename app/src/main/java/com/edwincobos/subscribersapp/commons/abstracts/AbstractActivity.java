@@ -3,7 +3,9 @@ package com.edwincobos.subscribersapp.commons.abstracts;
 import android.support.v7.app.AppCompatActivity;
 
 /**
- * Created by edwin.cobos on 19/08/2016.
+ * Abstract class to common methods for all activities.
+ * @author edwin.cobos
+ * @since 19/08/2016
  */
 public abstract class AbstractActivity extends AppCompatActivity {
 
