@@ -3,10 +3,10 @@ package com.edwincobos.subscribersapp.main;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.edwincobos.subscribersapp.R;
+import com.edwincobos.subscribersapp.commons.abstracts.AbstractActivity;
 import com.edwincobos.subscribersapp.commons.utils.Constants;
 import com.edwincobos.subscribersapp.subscriberslist.SubscribersListActivity;
 
@@ -14,7 +14,7 @@ import com.edwincobos.subscribersapp.subscriberslist.SubscribersListActivity;
  * This is the main activity where the App starts with splash screen
  * @author edwin.cobos
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AbstractActivity {
 
     private ImageView logoImage;
 
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
+        hideBar();
         startAnimation();
         startTimer();
     }
