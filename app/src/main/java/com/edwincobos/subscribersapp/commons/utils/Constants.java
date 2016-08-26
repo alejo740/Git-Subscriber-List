@@ -1,6 +1,8 @@
 package com.edwincobos.subscribersapp.commons.utils;
 
 /**
+ * Constants class used to manage all constants of the App code
+ *
  * @author edwin.cobos
  * @since 23/08/2016
  */

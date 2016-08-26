@@ -10,6 +10,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 
 /**
+ * ApiClientGithub class that works as a singleton to provide a Retrofit instance of Git Api and their end-points
+ *
  * @author edwin.cobos
  * @since 19/08/2016
  */

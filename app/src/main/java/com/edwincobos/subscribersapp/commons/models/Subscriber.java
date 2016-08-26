@@ -4,7 +4,6 @@ import com.google.gson.annotations.SerializedName;
 
 import java.lang.reflect.Field;
 
-
 /**
  * Subscriber class that represents each Github subscriber
  *
