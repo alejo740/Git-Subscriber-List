@@ -8,17 +8,19 @@ import com.edwincobos.subscribersapp.commons.abstracts.AbstractActivity;
 /**
  * This Activity shows the subscribers list of Github.
  * This class implements the SubscribersListView interface
+ *
  * @author edwin.cobos
  */
 public class SubscribersListActivity extends AbstractActivity implements SubscribersListView {
 
     private SubscribersListPresenter presenter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subscribers_list);
 
-        presenter = new SubscribersListPresenterImp(this);
+        presenter = new SubscribersListPresenterImpl(this);
         presenter.getSubscribersList();
     }
 
@@ -29,17 +31,7 @@ public class SubscribersListActivity extends AbstractActivity implements Subscri
     }
 
     @Override
-    public void showProgress() {
-
-    }
-
-    @Override
-    public void hideProgress() {
-
-    }
-
-    @Override
     public void navigateToUserDetail() {
-
+        //TODO: Implement fragment transaction to change to user detail fragment
     }
 }

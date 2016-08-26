@@ -7,19 +7,20 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Presenter class that connect the Activity class(view) and Interactor class(Model).
+ * Presenter class that connects the Activity class(view) and Interactor class(Model).
  * This class implements SubscribersListPresenter interface.
+ *
  * @author edwin.cobos
  * @since 18/08/2016
  */
-public class SubscribersListPresenterImp implements SubscribersListPresenter, SubscribersListInteractor.OnFinishedListener {
+public class SubscribersListPresenterImpl implements SubscribersListPresenter, SubscribersListInteractor.OnFinishedListener {
 
     private SubscribersListView view;
     private SubscribersListInteractor interactor;
 
-    public SubscribersListPresenterImp(SubscribersListView view){
+    public SubscribersListPresenterImpl(SubscribersListView view) {
         this.view = view;
-        this.interactor = new SubscribersListInteractorImp();
+        this.interactor = new SubscribersListInteractorImpl();
     }
 
     @Override

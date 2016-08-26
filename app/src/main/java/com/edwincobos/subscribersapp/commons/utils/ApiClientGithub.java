@@ -17,9 +17,7 @@ public class ApiClientGithub {
     private static GithubApiInterface apiService;
 
     public static GithubApiInterface getApiService() {
-
-        if(apiService == null){
-
+        if (apiService == null) {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(Constants.GITHUB_BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
@@ -27,14 +25,13 @@ public class ApiClientGithub {
 
             apiService = retrofit.create(GithubApiInterface.class);
         }
-
         return apiService;
     }
 
     /**
-     * This interface define the end-points of service
+     * This interface defines the end-points of service
      */
-    public interface GithubApiInterface{
+    public interface GithubApiInterface {
 
         @GET("repos/googlesamples/android-architecture/subscribers")
         Call<List<Subscriber>> getSubscribers();
